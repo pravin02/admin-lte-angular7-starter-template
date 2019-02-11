@@ -1,0 +1,940 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>admin-lte documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">admin-lte documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>LoginComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/auth/login/login.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-login</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./login.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#loginFormGroup">loginFormGroup</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#subscription">subscription</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#user">user</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onLoginClicked">onLoginClicked</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#email">email</a>
+                                </li>
+                                <li>
+                                    <a href="#password">password</a>
+                                </li>
+                                <li>
+                                    <a href="#rememberMe">rememberMe</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(document: Document, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, toastrService: ToastrService, authService: <a href="../injectables/AuthService.html">AuthService</a>, sessionService: <a href="../injectables/SessionService.html">SessionService</a>, jwt: <a href="../injectables/JWTUtils.html">JWTUtils</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/auth/login/login.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>document</td>
+                                                  
+                                                        <td>
+                                                                    <code>Document</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toastrService</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>authService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>sessionService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/SessionService.html" target="_self" >SessionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>jwt</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/JWTUtils.html" target="_self" >JWTUtils</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnDestroy"></a>
+                        <span class="name">
+                            <b>
+                            ngOnDestroy
+                            </b>
+                            <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">src/app/auth/login/login.component.ts:89</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/auth/login/login.component.ts:45</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onLoginClicked"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            onLoginClicked
+                            </b>
+                            <a href="#onLoginClicked"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>onLoginClicked(loginFormGroup)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/auth/login/login.component.ts:59</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>loginFormGroup</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loginFormGroup"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            loginFormGroup
+                            </b>
+                            <a href="#loginFormGroup"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>loginFormGroup:     <code></code>
+</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/auth/login/login.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="subscription"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            subscription
+                            </b>
+                            <a href="#subscription"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>subscription:     <code>Subscription</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/auth/login/login.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="user"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            user
+                            </b>
+                            <a href="#user"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>user:     <code><a href="../interfaces/User.html" target="_self" >User</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/User.html" target="_self" >User</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{ fullName: &#x27;&#x27;, email: &#x27;&#x27;, password: &#x27;&#x27; }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/auth/login/login.component.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="email"></a>
+                        <span class="name"><b>email</b><a href="#email"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>email()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/auth/login/login.component.ts:49</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="password"></a>
+                        <span class="name"><b>password</b><a href="#password"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>password()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/auth/login/login.component.ts:52</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="rememberMe"></a>
+                        <span class="name"><b>rememberMe</b><a href="#rememberMe"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>rememberMe()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/auth/login/login.component.ts:55</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Inject, OnDestroy } from &#x27;@angular/core&#x27;;
+import { DOCUMENT } from &#x27;@angular/platform-browser&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+
+import { ToastrService } from &#x27;ngx-toastr&#x27;;
+
+import { User } from &#x27;src/app/models/user.model&#x27;;
+import { FormBuilder, FormControl, Validators } from &#x27;@angular/forms&#x27;;
+import { onSubmitFormGroup } from &#x27;src/app/utils/on-submit-form&#x27;;
+import { AuthService } from &#x27;src/app/core/services/auth.service&#x27;;
+import { Subscription } from &#x27;rxjs&#x27;;
+import { SessionService } from &#x27;src/app/core/services/session.service&#x27;;
+import { Constants } from &#x27;src/app/core/constants&#x27;;
+import { HttpErrorResponse } from &#x27;@angular/common/http&#x27;;
+import { JWTUtils } from &#x27;src/app/core/services/jwt.utils&#x27;;
+
+declare var jQuery:any;
+
+@Component({
+  selector: &#x27;app-login&#x27;,
+  templateUrl: &#x27;./login.component.html&#x27;
+})
+export class LoginComponent implements OnInit, OnDestroy {
+  private user: User &#x3D; { fullName: &#x27;&#x27;, email: &#x27;&#x27;, password: &#x27;&#x27; };
+  public loginFormGroup;
+  private subscription: Subscription;
+
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    private router: Router,
+    private fb: FormBuilder,
+    private toastrService: ToastrService,
+    private authService: AuthService,
+    private sessionService: SessionService,
+    private jwt : JWTUtils   
+  ) {
+    this.loginFormGroup &#x3D; this.fb.group({
+      email: new FormControl(&#x27;&#x27;,
+        [Validators.required, Validators.pattern(/^[0-9a-zA-z]+[a-zA-Z0-9._]+@[a-zA-Z0-9]+\.[a-zA-Z.]{2,5}$/)]),
+      password: new FormControl(&#x27;&#x27;, [Validators.required]),
+      rememberMe: new FormControl(false)
+    });
+  }
+
+  ngOnInit() {
+    this.document.body.className &#x3D; &quot;hold-transition login-page&quot;;
+  }
+
+  get email() {
+    return this.loginFormGroup.get(&#x27;email&#x27;);
+  }
+  get password() {
+    return this.loginFormGroup.get(&#x27;password&#x27;);
+  }
+  get rememberMe() {
+    return this.loginFormGroup.get(&#x27;rememberMe&#x27;);
+  }
+
+  public onLoginClicked(loginFormGroup) {
+    let user &#x3D; loginFormGroup.value;
+    //console.log(user);
+
+    if (loginFormGroup.invalid) {
+      onSubmitFormGroup(loginFormGroup);
+      this.toastrService.error(&#x27;Please enter email ID and password&#x27;, Constants.TITLE_ERROR);
+      return;
+    }
+
+    this.subscription &#x3D; this.authService.login(user
+    ).subscribe((response: any) &#x3D;&gt; {
+      if (response.status) {
+        jQuery(&#x27;#loginModal&#x27;).modal(&#x27;hide&#x27;);
+        console.log(response.data);
+        let tokenData &#x3D; this.jwt.decodeJwt(response.data);
+        console.log(tokenData);
+         this.sessionService.setUserID(tokenData.userId);
+         this.sessionService.setFullName(&#x60;${tokenData.firstName} ${tokenData.lastName}&#x60;);
+         this.sessionService.setProfilePic(tokenData.image);
+        this.router.navigate([&quot;/layout/dashboard&quot;]);
+        this.toastrService.success(response.message, Constants.TITLE_SUCCESS);
+      } else {
+        this.toastrService.error(response.message, Constants.TITLE_ERROR);
+      }
+    }, (error: HttpErrorResponse) &#x3D;&gt; {
+      this.toastrService.error(error.error.message, Constants.TITLE_ERROR);
+    });
+  }
+
+  ngOnDestroy() {
+    if (this.subscription !&#x3D; null &amp;&amp; this.subscription !&#x3D;&#x3D; undefined)
+      this.subscription.unsubscribe();
+  }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div&gt;
+    &lt;div class&#x3D;&quot;login-box&quot;&gt;
+        &lt;div class&#x3D;&quot;login-logo&quot;&gt;
+            &lt;a routerLink&#x3D;&quot;/login&quot;&gt;&lt;b&gt;Admin&lt;/b&gt;LTE&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;form [formGroup]&#x3D;&quot;loginFormGroup&quot;&gt;
+                &lt;div class&#x3D;&quot;login-box-body&quot;&gt;
+                    &lt;p class&#x3D;&quot;login-box-msg&quot;&gt;Sign in to start your session&lt;/p&gt;
+                    &lt;div class&#x3D;&quot;form-group has-feedback&quot;&gt;
+                        &lt;input type&#x3D;&quot;email&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Email&quot; formControlName&#x3D;&quot;email&quot;&gt;
+                        &lt;span class&#x3D;&quot;glyphicon glyphicon-envelope form-control-feedback&quot;&gt;&lt;/span&gt;
+
+                        &lt;div *ngIf&#x3D;&quot;email.errors &amp;&amp; (email.invalid &amp;&amp; email.touched)&quot; class&#x3D;&quot;text-danger&quot;&gt;
+                            &lt;span *ngIf&#x3D;&quot;email.errors?.required&quot;&gt;Please enter emailID&lt;/span&gt;
+                            &lt;span *ngIf&#x3D;&quot;email.errors?.pattern&quot;&gt;Please enter valid emailID&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;form-group has-feedback&quot;&gt;
+                        &lt;input type&#x3D;&quot;password&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Password&quot; formControlName&#x3D;&quot;password&quot;&gt;
+                        &lt;span class&#x3D;&quot;glyphicon glyphicon-lock form-control-feedback&quot;&gt;&lt;/span&gt;
+
+                        &lt;div *ngIf&#x3D;&quot;password.errors &amp;&amp; (password.invalid &amp;&amp; password.touched)&quot; class&#x3D;&quot;text-danger&quot;&gt;
+                            Please enter password
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;form-group has-feedback&quot;&gt;
+                        &lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;remember&quot; formControlName&#x3D;&quot;rememberMe&quot;&gt; Remember Me
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;form-group has-feedback&quot;&gt;
+                        &lt;button class&#x3D;&quot;btn btn-primary btn-block btn-flat&quot; (click)&#x3D;&quot;onLoginClicked(loginFormGroup)&quot;&gt;Sign
+                            In
+                        &lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;form-group has-feedback&quot;&gt;
+                        &lt;a routerLink&#x3D;&quot;/forgot-password&quot; class&#x3D;&quot;text-center&quot;&gt;Forgot Password?&lt;/a&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class&#x3D;&quot;form-group has-feedback&quot;&gt;
+                        &lt;a routerLink&#x3D;&quot;/register&quot; class&#x3D;&quot;text-center&quot;&gt;Register a new membership&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/form&gt;
+
+        &lt;!-- &lt;button class&#x3D;&quot;btn btn-sm btn-primary&quot; data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#loginModal&quot;&gt; Modal &lt;/button&gt; --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id&#x3D;&quot;loginModal&quot; class&#x3D;&quot;modal fade&quot; role&#x3D;&quot;dialog&quot;&gt;
+    &lt;div class&#x3D;&quot;modal-dialog&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+            &lt;div class&#x3D;&quot;modal-header&quot;&gt;
+                &lt;span class&#x3D;&quot;modal-title&quot;&gt; Login Modal&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+                &lt;form [formGroup]&#x3D;&quot;loginFormGroup&quot;&gt;
+                    &lt;div class&#x3D;&quot;login-box-body&quot;&gt;
+                        &lt;p class&#x3D;&quot;login-box-msg&quot;&gt;Sign in to start your session&lt;/p&gt;
+                        &lt;div class&#x3D;&quot;form-group has-feedback&quot;&gt;
+                            &lt;input type&#x3D;&quot;email&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Email&quot; formControlName&#x3D;&quot;email&quot;&gt;
+                            &lt;span class&#x3D;&quot;glyphicon glyphicon-envelope form-control-feedback&quot;&gt;&lt;/span&gt;
+
+                            &lt;div *ngIf&#x3D;&quot;email.errors &amp;&amp; (email.invalid &amp;&amp; email.touched)&quot; class&#x3D;&quot;text-danger&quot;&gt;
+                                &lt;span *ngIf&#x3D;&quot;email.errors?.required&quot;&gt;Please enter emailID&lt;/span&gt;
+                                &lt;span *ngIf&#x3D;&quot;email.errors?.pattern&quot;&gt;Please enter valid emailID&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;form-group has-feedback&quot;&gt;
+                            &lt;input type&#x3D;&quot;password&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Password&quot; formControlName&#x3D;&quot;password&quot;&gt;
+                            &lt;span class&#x3D;&quot;glyphicon glyphicon-lock form-control-feedback&quot;&gt;&lt;/span&gt;
+
+                            &lt;div *ngIf&#x3D;&quot;password.errors &amp;&amp; (password.invalid &amp;&amp; password.touched)&quot; class&#x3D;&quot;text-danger&quot;&gt;
+                                Please enter password
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;form-group has-feedback&quot;&gt;
+                            &lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;remember&quot; formControlName&#x3D;&quot;rememberMe&quot;&gt; Remember Me
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;form-group has-feedback&quot;&gt;
+                            &lt;button class&#x3D;&quot;btn btn-primary btn-block btn-flat&quot; (click)&#x3D;&quot;onLoginClicked(loginFormGroup)&quot;&gt;Sign
+                                In
+                            &lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;form-group has-feedback&quot;&gt;
+                            &lt;a routerLink&#x3D;&quot;/forgot-password&quot; class&#x3D;&quot;text-center&quot;&gt;Forgot Password?&lt;/a&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class&#x3D;&quot;form-group has-feedback&quot;&gt;
+                            &lt;a routerLink&#x3D;&quot;/register&quot; class&#x3D;&quot;text-center&quot;&gt;Register a new membership&lt;/a&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div>    <div class="login-box">        <div class="login-logo">            <a routerLink="/login"><b>Admin</b>LTE</a>        </div>        <form [formGroup]="loginFormGroup">                <div class="login-box-body">                    <p class="login-box-msg">Sign in to start your session</p>                    <div class="form-group has-feedback">                        <input type="email" class="form-control" placeholder="Email" formControlName="email">                        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>                        <div *ngIf="email.errors && (email.invalid && email.touched)" class="text-danger">                            <span *ngIf="email.errors?.required">Please enter emailID</span>                            <span *ngIf="email.errors?.pattern">Please enter valid emailID</span>                        </div>                    </div>                    <div class="form-group has-feedback">                        <input type="password" class="form-control" placeholder="Password" formControlName="password">                        <span class="glyphicon glyphicon-lock form-control-feedback"></span>                        <div *ngIf="password.errors && (password.invalid && password.touched)" class="text-danger">                            Please enter password                        </div>                    </div>                    <div class="form-group has-feedback">                        <input type="checkbox" name="remember" formControlName="rememberMe"> Remember Me                    </div>                    <div class="form-group has-feedback">                        <button class="btn btn-primary btn-block btn-flat" (click)="onLoginClicked(loginFormGroup)">Sign                            In                        </button>                    </div>                    <div class="form-group has-feedback">                        <a routerLink="/forgot-password" class="text-center">Forgot Password?</a>                    </div>                    <div class="form-group has-feedback">                        <a routerLink="/register" class="text-center">Register a new membership</a>                    </div>                </div>            </form>        <!-- <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#loginModal"> Modal </button> -->    </div></div><div id="loginModal" class="modal fade" role="dialog">    <div class="modal-dialog">        <div class="modal-content">            <div class="modal-header">                <span class="modal-title"> Login Modal</span>            </div>            <div class="modal-body">                <form [formGroup]="loginFormGroup">                    <div class="login-box-body">                        <p class="login-box-msg">Sign in to start your session</p>                        <div class="form-group has-feedback">                            <input type="email" class="form-control" placeholder="Email" formControlName="email">                            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>                            <div *ngIf="email.errors && (email.invalid && email.touched)" class="text-danger">                                <span *ngIf="email.errors?.required">Please enter emailID</span>                                <span *ngIf="email.errors?.pattern">Please enter valid emailID</span>                            </div>                        </div>                        <div class="form-group has-feedback">                            <input type="password" class="form-control" placeholder="Password" formControlName="password">                            <span class="glyphicon glyphicon-lock form-control-feedback"></span>                            <div *ngIf="password.errors && (password.invalid && password.touched)" class="text-danger">                                Please enter password                            </div>                        </div>                        <div class="form-group has-feedback">                            <input type="checkbox" name="remember" formControlName="rememberMe"> Remember Me                        </div>                        <div class="form-group has-feedback">                            <button class="btn btn-primary btn-block btn-flat" (click)="onLoginClicked(loginFormGroup)">Sign                                In                            </button>                        </div>                        <div class="form-group has-feedback">                            <a routerLink="/forgot-password" class="text-center">Forgot Password?</a>                        </div>                        <div class="form-group has-feedback">                            <a routerLink="/register" class="text-center">Register a new membership</a>                        </div>                    </div>                </form>            </div>        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'ActionComponent', 'selector': 'ag-clickable'},{'name': 'ActionParentComponent', 'selector': 'clickable-cell'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthComponent', 'selector': 'app-auth-component'},{'name': 'CompanyProfileComponent', 'selector': 'app-profile-company'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'EmployeeListComponent', 'selector': 'app-employee-list'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotPasswordComponent', 'selector': 'app-forgot-password'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LayoutComponent', 'selector': 'app-layout'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'TestingComponent', 'selector': 'app-test'},{'name': 'UpdatePasswordComponent', 'selector': 'app-update-password'},{'name': 'UserProfileComponent', 'selector': 'app-profile-user'}];
+    var DIRECTIVES = [{'name': 'StatusDirective', 'selector': '[status]'}];
+    var ACTUAL_COMPONENT = {'name': 'LoginComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'LoginComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
