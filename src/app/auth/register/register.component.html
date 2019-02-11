@@ -1,0 +1,84 @@
+<div class="register-box">
+  <div class="register-logo">
+    <a routerLink="/login"><b>Admin</b>LTE</a>
+  </div>
+
+  <div class="register-box-body">
+    <p class="login-box-msg">Register a new membership</p>
+
+    <form [formGroup]="registerFormGroup">
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" placeholder="Full name" formControlName="fullName">
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+
+        <div *ngIf="fullName.errors && (fullName.invalid && fullName.touched)" class="text-danger">
+          <span *ngIf="fullName.errors?.required">Please enter full name</span>
+          <span *ngIf="fullName.errors?.pattern">Full name be in characters only</span>
+        </div>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="email" class="form-control" placeholder="Email" formControlName="email">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+
+        <div *ngIf="email.errors && (email.invalid && email.touched)" class="text-danger">
+          <span *ngIf="email.errors?.required">Please enter emailID</span>
+          <span *ngIf="email.errors?.pattern">Please enter valid emailID</span>
+        </div>
+      </div>
+
+      <div class="form-group has-feedback">
+        <select class="form-control" (ngModelChange)="getCityList(state.value)" formControlName="state">
+          <option selected> Select State </option>
+          <option *ngFor="let state of states" [ngValue]="state">{{state.name}}</option>
+        </select>
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+
+        <div *ngIf="state.errors && (state.invalid && state.touched)" class="text-danger">
+          <span *ngIf="state.errors?.required">Please select state</span>
+        </div>
+      </div>
+
+      <div class="form-group has-feedback">
+        <select class="form-control" formControlName="city">
+          <option selected> Select City </option>
+          <option *ngFor="let city of cities" [value]="city">{{city.name}}</option>
+        </select>
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+
+        <div *ngIf="city.errors && (city.invalid && city.touched)" class="text-danger">
+          <span *ngIf="city.errors?.required">Please select city</span>
+        </div>
+      </div>
+
+
+      <div class="form-group has-feedback">
+        <input type="password" class="form-control" placeholder="Password" formControlName="password">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+
+        <div *ngIf="password.errors && (password.invalid && password.touched)" class="text-danger">
+          Please enter password
+        </div>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" class="form-control" placeholder="Retype password" formControlName="confirmPassword">
+        <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+
+        <div *ngIf="confirmPassword.errors && (confirmPassword.invalid && confirmPassword.touched)" class="text-danger">
+          Please enter confirm password
+        </div>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="checkbox" formControlName="agreeTerms"> I agree to the <a href="#">terms</a>
+
+        <div *ngIf="agreeTerms.errors && (agreeTerms.invalid && agreeTerms.touched)" class="text-danger">
+          Please enter agree terms and conditions
+        </div>
+
+      </div>
+      <div class="form-group has-feedback">
+        <button type="submit" class="btn btn-primary btn-block btn-flat" (click)="onRegister(registerFormGroup)">Register</button>
+      </div>
+    </form>
+    <a routerLink="/login" class="text-center">I already have a membership</a>
+  </div>
+</div>

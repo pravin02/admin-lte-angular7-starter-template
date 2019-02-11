@@ -1,0 +1,75 @@
+<section class="content-header">
+    <h1>
+        Company Profile
+        <small>Control panel</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Dashboard</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="box box-success">
+        <div class="box-header with-border">
+            <h3 class="box-title">Company Profile</h3>
+        </div>
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <img [src]="profile.image" class="thumbnail" height="200" width="200">
+
+                    <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#cameraModal" (click)="showWebcam = true">
+                        <i class="fa fa-camera"></i> Take Photo
+                    </button>
+                </div>
+                <div class="col-md-6">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="cameraModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" (click)="showWebcam = false">&times;</button>
+                <h4 class="modal-title">Capture Image From Camera</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <webcam [width]="600" [height]="400" [trigger]="triggerObservable" (imageCapture)="handleImage($event)"
+                            *ngIf="showWebcam" [videoOptions]="videoOptions" (initError)="handleInitError($event)"></webcam>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" (click)="triggerSnapshot();" data-dismiss="modal"
+                    data-toggle="modal" data-target="#confirmModal">Capture Image</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" (click)="showWebcam = false">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="confirmModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Do you wants to use captured Image as profile pick</h4>
+            </div>
+            <div class="moda-body">
+                <img [src]="webcamImage.imageAsDataUrl" width="600" height="400" *ngIf="webcamImage" />
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal" (click)="profile.image = webcamImage.imageAsDataUrl;showWebcam=false">Yes</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="showWebcam=false">No</button>
+            </div>
+        </div>
+    </div>
+</div>
