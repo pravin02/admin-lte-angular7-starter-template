@@ -4,7 +4,7 @@
 Run `ng serve -o` for a dev server.
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-![alt text](https://github.com/pravin02/admin-lte-starter-template/modules.png)
+![alt text](https://github.com/pravin02/admin-lte-starter-template/screenshots/modules.png)
 
 ## Features
 1) Admin LTE Integration
