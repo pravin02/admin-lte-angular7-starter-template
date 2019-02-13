@@ -60,5 +60,21 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.2.2"
-  }
+  },
+  "keywords": [
+    "Admin-lte",
+    "Angular7",
+    "Angular6",
+    "compodoc",
+    "ngx-webcam",
+    "responsive",
+    "bootstrap",
+    "Lazyloading",
+    "Header-Sidebar-Footer structure",
+    "Mutlimodule",
+    "JWT with angular"
+  ],
+  
+  "contributors": ["Pravin P Patil"],
+  "displayName": "Admin LTE - Angular 7"
 }
