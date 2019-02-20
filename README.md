@@ -31,14 +31,16 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 2) register
 ![alt text](https://github.com/pravin02/admin-lte-starter-template/blob/master/screenshots/Register.png)
 3) Forgot Password
-![alt text](https://github.com/pravin02/admin-lte-starter-template/blob/master/screenshots/Forgot-password.png)
+![alt text](https://github.com/pravin02/admin-lte-starter-template/blob/master/screenshots/Forgot-password1.png)
 4) Dashboard
 ![alt text](https://github.com/pravin02/admin-lte-starter-template/blob/master/screenshots/Dashboard.png)
 5) Employee List
-![alt text](https://github.com/pravin02/admin-lte-starter-template/blob/master/screenshots/Employee-List.png)
+![alt text](https://github.com/pravin02/admin-lte-starter-template/blob/master/screenshots/Employee-List1.png)
 6) Profile module - i) User Profile
-![alt text](https://github.com/pravin02/admin-lte-starter-template/blob/master/screenshots/User-Profile.png)
+![alt text](https://github.com/pravin02/admin-lte-starter-template/blob/master/screenshots/User-Profile1.png)
 7) Profile module - i) Company Profile
 8) Profile module - i) Update Password
-![alt text](https://github.com/pravin02/admin-lte-starter-template/blob/master/screenshots/Update-Password.png)
+![alt text](https://github.com/pravin02/admin-lte-starter-template/blob/master/screenshots/Update-Password1.png)
+Ajax Loader
+![alt text](https://github.com/pravin02/admin-lte-starter-template/blob/master/screenshots/Ajax-loader.png)
 
