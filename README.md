@@ -42,7 +42,9 @@ Ajax Loader
 ![alt text](https://github.com/pravin02/admin-lte-starter-template/blob/master/screenshots/User-Profile.png)
 ![alt text](https://github.com/pravin02/admin-lte-starter-template/blob/master/screenshots/Capture-profile-pic-from-webcam.png)
 7) Profile module - i) Company Profile
-![alt text](https://github.com/pravin02/admin-lte-starter-template/blob/master/screenshots/Capture-profile-pic-from-webcam.png)
+![alt text](https://github.com/pravin02/admin-lte-starter-template/blob/master/screenshots/Company-profile.png)
+![alt text](https://github.com/pravin02/admin-lte-starter-template/blob/master/screenshots/Company-profile-web-cam.png)
+![alt text](https://github.com/pravin02/admin-lte-starter-template/blob/master/screenshots/Confirmation.png)
 8) Profile module - i) Update Password
 ![alt text](https://github.com/pravin02/admin-lte-starter-template/blob/master/screenshots/Update-Password.png)
 
