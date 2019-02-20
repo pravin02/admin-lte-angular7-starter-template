@@ -1,11 +1,10 @@
 # AdminLte
 
 Version 7.1.4.
-=======
-# AdminLte Version 7.1.4.
 
 
-## Run & Build
+## Install Run & Build
+Open terminal and goto project root directory hit npm install && ng serve -o to install dependancies and run project.
 Run `ng serve -o` for a dev server.
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
