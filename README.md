@@ -28,6 +28,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Screens
 1) Login
 ![alt text](https://github.com/pravin02/admin-lte-starter-template/blob/master/screenshots/Login.png)
+Ajax Loader
+![alt text](https://github.com/pravin02/admin-lte-starter-template/blob/master/screenshots/Ajax-loader.png)
 2) register
 ![alt text](https://github.com/pravin02/admin-lte-starter-template/blob/master/screenshots/Register.png)
 3) Forgot Password
@@ -41,6 +43,4 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 7) Profile module - i) Company Profile
 8) Profile module - i) Update Password
 ![alt text](https://github.com/pravin02/admin-lte-starter-template/blob/master/screenshots/Update-Password.png)
-Ajax Loader
-![alt text](https://github.com/pravin02/admin-lte-starter-template/blob/master/screenshots/Ajax-loader.png)
 

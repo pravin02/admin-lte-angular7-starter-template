@@ -1,5 +1,6 @@
 {
   "name": "admin-lte",
+  "displayName": "Admin LTE - Angular 7",
   "version": "1.0.0",
   "author": "Pravin P Patil",
   "description": "admin-lte",
@@ -75,6 +76,5 @@
     "JWT with angular"
   ],
   
-  "contributors": ["Pravin P Patil"],
-  "displayName": "Admin LTE - Angular 7"
+  "contributors": ["Pravin P Patil", "Mohsin Khatik"]  
 }
