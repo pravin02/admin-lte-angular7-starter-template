@@ -14,7 +14,7 @@ import { Constants } from 'src/app/core/constants';
 import { HttpErrorResponse } from '@angular/common/http';
 import { JWTUtils } from 'src/app/core/services/jwt.utils';
 
-declare var jQuery:any;
+declare var jQuery: any;
 
 @Component({
   selector: 'app-login',
@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     private toastrService: ToastrService,
     private authService: AuthService,
     private sessionService: SessionService,
-    private jwt : JWTUtils   
+    private jwt: JWTUtils
   ) {
     this.loginFormGroup = this.fb.group({
       email: new FormControl('',
@@ -70,12 +70,12 @@ export class LoginComponent implements OnInit, OnDestroy {
     ).subscribe((response: any) => {
       if (response.status) {
         jQuery('#loginModal').modal('hide');
-        console.log(response.data);
-        let tokenData = this.jwt.decodeJwt(response.data);
-        console.log(tokenData);
-         this.sessionService.setUserID(tokenData.userId);
-         this.sessionService.setFullName(`${tokenData.firstName} ${tokenData.lastName}`);
-         this.sessionService.setProfilePic(tokenData.image);
+
+        this.sessionService.setUserID(response.data.userId);
+        this.sessionService.setFullName(`${response.data.fullName}`);
+        this.sessionService.setProfilePic(response.data.image);
+        this.sessionService.setEmail(response.data.email);
+
         this.router.navigate(["/layout/dashboard"]);
         this.toastrService.success(response.message, Constants.TITLE_SUCCESS);
       } else {

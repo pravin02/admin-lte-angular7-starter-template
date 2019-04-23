@@ -1,8 +1,8 @@
 import { Country } from './country.model';
 
-export interface State {
-    _id : Number;
-    stateID: Number;
-    name: String;
+export interface State {   
+    stateId: Number;
+    stateName: String;
+    stateCode? : String;    
     country?: Country;
 }

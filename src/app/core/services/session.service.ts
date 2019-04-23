@@ -4,6 +4,7 @@ import { Injectable } from "@angular/core";
 @Injectable()
 export class SessionService {
     private USERID_KEY = 'USERID_KEY';
+    private EMAIL_KEY = 'EMAIL_KEY';
     private FULLNAME_KEY = 'FULLNAME_KEY';
     private PROFILE_PIC_KEY = 'PROFILE_PIC_KEY';
     private JWT_TOKEN_KEY = 'JWT_TOKEN_KEY';
@@ -40,9 +41,18 @@ export class SessionService {
         localStorage.setItem(this.JWT_TOKEN_KEY, token);
     }
 
+    public getEmail() {
+        return localStorage.getItem(this.EMAIL_KEY);
+    }
+    
+    public setEmail(email) {
+        localStorage.setItem(this.EMAIL_KEY, email);
+    }
+
     public logOut() {
         localStorage.setItem(this.USERID_KEY, null);
         localStorage.setItem(this.FULLNAME_KEY, null);
         localStorage.setItem(this.PROFILE_PIC_KEY, null);
+        localStorage.setItem(this.EMAIL_KEY, null);
     }
 }

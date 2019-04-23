@@ -13,6 +13,9 @@ import { CommonService } from 'src/app/core/services/common.service';
 import { City } from 'src/app/models/city.model';
 import { State } from 'src/app/models/state.model';
 import { CommonResponse } from 'src/app/models/common.response';
+import { Country } from 'src/app/models/country.model';
+import { UserRole } from 'src/app/models/user.role';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-register',
@@ -23,6 +26,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
   public registerFormGroup;
   private subscription: Subscription;
 
+  public countries: Country[];
   public states: State[];
   public cities: City[];
 
@@ -37,6 +41,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
     this.registerFormGroup = this.fb.group({
       fullName: new FormControl('', [Validators.required, Validators.pattern(/^[A-Za-z -]+$/)]),
       email: new FormControl('', [Validators.required, Validators.pattern(/^[0-9a-zA-z]+[a-zA-Z0-9._]+@[a-zA-Z0-9]+\.[a-zA-Z.]{2,5}$/)]),
+      country: new FormControl('', [Validators.required]),
       state: new FormControl('', [Validators.required]),
       city: new FormControl('', [Validators.required]),
       password: new FormControl('', [Validators.required]),
@@ -50,6 +55,9 @@ export class RegisterComponent implements OnInit, OnDestroy {
   }
   get email() {
     return this.registerFormGroup.get('email');
+  }
+  get country() {
+    return this.registerFormGroup.get('country');
   }
   get state() {
     return this.registerFormGroup.get('state');
@@ -69,8 +77,25 @@ export class RegisterComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.document.body.className = "hold-transition register-page";
+    this.getCountryList();
+  }
 
-    this.subscription = this.commonService.getStateList()
+  public getCountryList() {
+    this.subscription = this.commonService.getCountryList()
+      .subscribe((response: CommonResponse) => {
+        if (response.status) {
+          this.countries = response.data;
+        }
+        else {
+          this.toastrService.error(response.message, Constants.TITLE_ERROR);
+        }
+      }, error => {
+        this.toastrService.error(error.error.message, Constants.TITLE_ERROR);
+      })
+  }
+
+  public getStateList(country: Country) {
+    this.subscription = this.commonService.getStateList(country.countryId)
       .subscribe((response: CommonResponse) => {
         if (response.status) {
           this.states = response.data;
@@ -84,8 +109,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
   }
 
   public getCityList(state: State) {
-
-    this.subscription = this.commonService.getCityList(state._id)
+    this.subscription = this.commonService.getCityList(state.stateId)
       .subscribe((response: CommonResponse) => {
         if (response.status) {
           this.cities = response.data;
@@ -105,21 +129,28 @@ export class RegisterComponent implements OnInit, OnDestroy {
       this.toastrService.error('Please fill all the fields are mandatory', Constants.TITLE_ERROR);
       return;
     }
+
+    console.log(user);
+    user.role = UserRole.EMPLOYEE;
+
     this.subscription = this.authService.register(user
     ).subscribe((response: any) => {
       console.log(response);
       if (response.status) {
-        this.sessionService.setUserID(response.data.userID);
-        this.sessionService.setFullName(`${response.data.firstName} ${response.data.lastName}`);
-        this.sessionService.setProfilePic(response.data.profilePicture);
+        this.sessionService.setUserID(response.data.userId);
+        this.sessionService.setFullName(`${response.data.fullName}`);
+        this.sessionService.setProfilePic(response.data.image);
+        this.sessionService.setEmail(response.data.email);
+
+        
         this.router.navigate(["/layout/dashboard"]);
-        this.toastrService.error(response.message, Constants.TITLE_SUCCESS);
+        this.toastrService.success(response.message, Constants.TITLE_SUCCESS);
       } else {
         this.toastrService.error(response.message, Constants.TITLE_ERROR);
       }
-    }, (error: any) => {
+    }, (error: HttpErrorResponse) => {
       console.log(error);
-      this.toastrService.error(error, Constants.TITLE_ERROR);
+      this.toastrService.error(error.error.message, Constants.TITLE_ERROR);
     });
   }
 

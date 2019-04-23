@@ -7,11 +7,15 @@ export class CommonService {
 
     constructor(public api: Api) { }
 
-    public getStateList() {
-        return this.api.get('states');
+    public getCountryList() {
+        return this.api.get('countries');
+    }
+
+    public getStateList(countryID : Number) {
+        return this.api.get(`states/${countryID}`);
     }
 
     public getCityList(stateID: Number) {
-        return this.api.get(`cities?stateID=${stateID}`);
+        return this.api.get(`cities/${stateID}`);
     }
 }

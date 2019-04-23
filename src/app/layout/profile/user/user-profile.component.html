@@ -16,9 +16,10 @@
         <div class="box-body">
             <div class="row">
                 <div class="col-md-4">
-                    <img [src]="user.image" class="thumbnail" height="220" width="220">
+                    <img [src]="user.image" class="thumbnail" height="220" width="220" />
 
-                    <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#cameraModal" (click)="showWebcam = true">
+                    <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#cameraModal"
+                        (click)="showWebcam = true">
                         <i class="fa fa-camera"></i> Take Photo
                     </button> &nbsp;
 
@@ -31,23 +32,27 @@
                                 <label for="fullName"> Full Name <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" name="fullName" formControlName="fullName" />
 
-                                <div *ngIf="fullName.errors && (fullName.invalid && fullName.touched)" class="text-danger">
+                                <div *ngIf="fullName.errors && (fullName.invalid && fullName.touched)"
+                                    class="text-danger">
                                     <span *ngIf="fullName.errors?.required">Please enter full name</span>
                                     <span *ngIf="fullName.errors?.pattern">Full name be in characters only</span>
                                 </div>
-
                             </div>
-                            <div class="form-group">
-                                <label for="email"> Email ID <span class="text-danger">*</span></label>
-                                <input type="email" class="form-control" name="email" formControlName="email" />
+
+                            <div class="form-group has-feedback">
+                                <input type="email" class="form-control" placeholder="Email" formControlName="email">
+                                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
 
                                 <div *ngIf="email.errors && (email.invalid && email.touched)" class="text-danger">
-                                    <span *ngIf="email.errors?.required"> Please enter email</span>
+                                    <span *ngIf="email.errors?.required">Please enter emailID</span>
+                                    <span *ngIf="email.errors?.pattern">Please enter valid emailID</span>
                                 </div>
                             </div>
+
                             <div class="form-group">
                                 <label for="mobileNumber"> Mobile Number <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" name="mobileNumber" formControlName="mobileNumber" />
+                                <input type="text" class="form-control" name="mobileNumber"
+                                    formControlName="mobileNumber" />
 
                                 <div *ngIf="mobileNumber.errors && (mobileNumber.invalid && mobileNumber.touched)"
                                     class="text-danger">
@@ -59,22 +64,14 @@
                                     <span *ngIf="mobileNumber.errors?.mobilenumber">{{mobileNumber.errors?.mobilenumber.value}}</span> -->
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="address"> Address</label>
-                                <textarea rows="4" cols="5" class="form-control" name="address" formControlName="address"> </textarea>
 
-                                <div *ngIf="address.errors && (address.invalid && address.touched)" class="text-danger">
-                                    <span *ngIf="address.errors?.required">Please enter address</span>
-                                    <span *ngIf="address.errors?.pattern">Special characters not allowed except ' '
-                                        & " " </span>
-                                    <!-- <span *ngIf="address.errors?.address">{{address.errors?.address.value}}</span> -->
-                                </div>
-                            </div>
                             <div class="form-group">
                                 <label for="country"> Country <span class="text-danger">*</span></label>
-                                <select class="form-control" name="country" formControlName="country">
+                                <select class="form-control" name="country" formControlName="country"
+                                    (ngModelChange)="getStateList(country.value)">
                                     <option>Select Country</option>
-                                    <option *ngFor="let country of countries">{{country.name}} </option>
+                                    <option *ngFor="let country of countries" [ngValue]="country">
+                                        {{country.countryName}} </option>
 
                                 </select>
 
@@ -84,8 +81,10 @@
                             </div>
                             <div class="form-group">
                                 <label for="state"> State <span class="text-danger">*</span></label>
-                                <select class="form-control" name="state" formControlName="state">
+                                <select class="form-control" name="state" formControlName="state"
+                                    (ngModelChange)="getCityList(state.value)">
                                     <option>Select State</option>
+                                    <option *ngFor="let state of states" [ngValue]="state">{{state.stateName}} </option>
                                 </select>
 
                                 <div *ngIf="state.errors && (state.invalid && state.touched)" class="text-danger">
@@ -96,10 +95,23 @@
                                 <label for="city"> City <span class="text-danger">*</span></label>
                                 <select class="form-control" name="city" formControlName="city">
                                     <option>Select City</option>
+                                    <option *ngFor="let city of cities" [ngValue]="city">{{city.cityName}} </option>
                                 </select>
 
                                 <div *ngIf="city.errors && (city.invalid && city.touched)" class="text-danger">
                                     <span *ngIf="city.errors?.required">Please enter city</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address"> Address</label>
+                                <textarea rows="4" cols="5" class="form-control" name="address"
+                                    formControlName="address"> </textarea>
+
+                                <div *ngIf="address.errors && (address.invalid && address.touched)" class="text-danger">
+                                    <span *ngIf="address.errors?.required">Please enter address</span>
+                                    <span *ngIf="address.errors?.pattern">Special characters not allowed except ' '
+                                        & " " </span>
+                                    <!-- <span *ngIf="address.errors?.address">{{address.errors?.address.value}}</span> -->
                                 </div>
                             </div>
                             <div class="form-group">
@@ -123,15 +135,17 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-md-12">
-                        <webcam [width]="600" [height]="400" [trigger]="triggerObservable" (imageCapture)="handleImage($event)"
-                            *ngIf="showWebcam" [videoOptions]="videoOptions" (initError)="handleInitError($event)"></webcam>
+                        <webcam [width]="600" [height]="400" [trigger]="triggerObservable"
+                            (imageCapture)="handleImage($event)" *ngIf="showWebcam" [videoOptions]="videoOptions"
+                            (initError)="handleInitError($event)"></webcam>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" (click)="triggerSnapshot();" data-dismiss="modal"
                     data-toggle="modal" data-target="#confirmModal">Capture Image</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal" (click)="showWebcam = false">Close</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal"
+                    (click)="showWebcam = false">Close</button>
             </div>
         </div>
     </div>
@@ -150,7 +164,8 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-success" data-dismiss="modal" (click)="user.image = webcamImage.imageAsDataUrl;showWebcam=false">Yes</button>
+                <button type="button" class="btn btn-success" data-dismiss="modal"
+                    (click)="user.image = webcamImage.imageAsDataUrl;showWebcam=false">Yes</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="showWebcam=false">No</button>
             </div>
         </div>

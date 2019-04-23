@@ -20,6 +20,8 @@ import { TokenInterceptor } from './core/interceptors/token.interceptor';
 import { TitleCasePipe } from '@angular/common';
 
 import { KeyboardShortcutsModule, KeyboardShortcutsService } from 'ng-keyboard-shortcuts';
+import { UserService } from './core/services/user.service';
+import { EmployeeService } from './core/services/employee.service';
 
 const routes: Routes = [
   { path: '', loadChildren: "./layout/layout.module#LayoutModule" },
@@ -57,6 +59,8 @@ const routes: Routes = [
     SessionService,
     AuthService, 
     CommonService,
+    UserService,
+    EmployeeService,
     KeyboardShortcutsService],
   bootstrap: [AppComponent]
 })

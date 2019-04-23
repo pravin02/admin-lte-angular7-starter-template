@@ -27,9 +27,21 @@
       </div>
 
       <div class="form-group has-feedback">
+        <select class="form-control" (ngModelChange)="getStateList(country.value)" formControlName="country">
+          <option selected> Select Country </option>
+          <option *ngFor="let country of countries" [ngValue]="country">{{country.countryName}}</option>
+        </select>
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+
+        <div *ngIf="state.errors && (state.invalid && state.touched)" class="text-danger">
+          <span *ngIf="state.errors?.required">Please select state</span>
+        </div>
+      </div>
+
+      <div class="form-group has-feedback">
         <select class="form-control" (ngModelChange)="getCityList(state.value)" formControlName="state">
           <option selected> Select State </option>
-          <option *ngFor="let state of states" [ngValue]="state">{{state.name}}</option>
+          <option *ngFor="let state of states" [ngValue]="state">{{state.stateName}}</option>
         </select>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
 
@@ -41,7 +53,7 @@
       <div class="form-group has-feedback">
         <select class="form-control" formControlName="city">
           <option selected> Select City </option>
-          <option *ngFor="let city of cities" [value]="city">{{city.name}}</option>
+          <option *ngFor="let city of cities" [ngValue]="city">{{city.cityName}}</option>
         </select>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
 

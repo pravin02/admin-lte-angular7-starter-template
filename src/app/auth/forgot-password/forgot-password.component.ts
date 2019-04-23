@@ -8,6 +8,7 @@ import { onSubmitFormGroup } from 'src/app/utils/on-submit-form';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { Subscription } from 'rxjs';
 import { Constants } from 'src/app/core/constants';
+import { HttpErrorResponse } from '@angular/common/http';
 
 
 @Component({
@@ -28,13 +29,13 @@ export class ForgotPasswordComponent implements OnInit, OnDestroy {
     private authService: AuthService) {
 
     this.forgotPasswordGroup = this.fb.group({
-      username: new FormControl('',
-        [Validators.required, Validators.pattern(/^[0-9a-zA-z]+[a-zA-Z0-9._]+@[a-zA-Z0-9]+\.[a-zA-Z.]{2,5}$/)])
+      email: new FormControl('',
+        [Validators.required, Validators.email])
     });
   }
 
-  get username() {
-    return this.forgotPasswordGroup.get('username');
+  get email() {
+    return this.forgotPasswordGroup.get('email');
   }
 
   ngOnInit() {
@@ -44,25 +45,24 @@ export class ForgotPasswordComponent implements OnInit, OnDestroy {
   public onRecoverPasswordClicked(forgotPasswordGroup) {
     let user = forgotPasswordGroup.value;
     console.log(user);
-
     if (forgotPasswordGroup.invalid) {
       onSubmitFormGroup(forgotPasswordGroup)
       this.toastrService.error('Please enter email ID', Constants.TITLE_ERROR);
       return;
     }
 
-    this.subscription = this.authService.forgotPassword({ emailID: user.username }
+    this.subscription = this.authService.forgotPassword({email : user.email}
     ).subscribe((response: any) => {
       console.log(response);
       if (response.status) {
         this.toastrService.success(response.message, Constants.TITLE_SUCCESS);
-        this.router.navigate(["/login"]);
+        this.forgotPasswordGroup.reset();        
       } else {
         this.toastrService.error(response.message, Constants.TITLE_ERROR);
       }
-    }, (error: any) => {
+    }, (error: HttpErrorResponse) => {
       console.log(error);
-      this.toastrService.error(error, Constants.TITLE_ERROR);
+      this.toastrService.error(error.error.message, Constants.TITLE_ERROR);
     });
     //this.router.navigate(["/login"]);
   }
