@@ -68,6 +68,7 @@
     </p>
     <p class="comment">
                 <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
     </p>
 
 
@@ -124,6 +125,10 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
+                                <a href="#cities">cities</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#countries">countries</a>
                             </li>
                             <li>
@@ -133,6 +138,14 @@
                             <li>
                                     <span class="modifier">Public</span>
                                 <a href="#showWebcam">showWebcam</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#states">states</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#subscription">subscription</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
@@ -168,11 +181,30 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
+                                <a href="#getCityList">getCityList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getCountryList">getCountryList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getStateList">getStateList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getUserDetail">getUserDetail</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#handleImage">handleImage</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
                                 <a href="#handleInitError">handleInitError</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
@@ -246,12 +278,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>)</code>
+<code>constructor(fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, commonService: <a href="../injectables/CommonService.html">CommonService</a>, userService: <a href="../injectables/UserService.html">UserService</a>, employeeService: <a href="../injectables/EmployeeService.html">EmployeeService</a>, toastrService: ToastrService, sessionService: <a href="../injectables/SessionService.html">SessionService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:27</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:43</a></div>
                             </td>
                         </tr>
 
@@ -273,6 +305,66 @@
                                                   
                                                         <td>
                                                                     <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>commonService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/CommonService.html" target="_self" >CommonService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>userService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/UserService.html" target="_self" >UserService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>employeeService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/EmployeeService.html" target="_self" >EmployeeService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toastrService</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>sessionService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/SessionService.html" target="_self" >SessionService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -302,6 +394,259 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="getCityList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            getCityList
+                            </b>
+                            <a href="#getCityList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getCityList(state: <a href="../interfaces/State.html">State</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="141" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:141</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>state</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/State.html" target="_self" >State</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getCountryList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            getCountryList
+                            </b>
+                            <a href="#getCountryList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getCountryList()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:113</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getStateList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            getStateList
+                            </b>
+                            <a href="#getStateList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getStateList(country: <a href="../interfaces/Country.html">Country</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="127" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:127</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>country</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/Country.html" target="_self" >Country</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getUserDetail"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            getUserDetail
+                            </b>
+                            <a href="#getUserDetail"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getUserDetail(userID: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:95</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>userID</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="handleImage"></a>
                         <span class="name">
                             <b>
@@ -322,7 +667,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="79" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:79</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="163" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:163</a></div>
                             </td>
                         </tr>
 
@@ -393,7 +738,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:75</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="159" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:159</a></div>
                             </td>
                         </tr>
 
@@ -444,6 +789,44 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="ngOnDestroy"></a>
+                        <span class="name">
+                            <b>
+                            ngOnDestroy
+                            </b>
+                            <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="208" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:208</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="ngOnInit"></a>
                         <span class="name">
                             <b>
@@ -464,7 +847,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:69</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="88" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:88</a></div>
                             </td>
                         </tr>
 
@@ -502,7 +885,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="91" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:91</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="175" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:175</a></div>
                             </td>
                         </tr>
 
@@ -569,7 +952,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="100" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:100</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="184" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:184</a></div>
                             </td>
                         </tr>
 
@@ -636,7 +1019,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="87" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:87</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="171" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:171</a></div>
                             </td>
                         </tr>
 
@@ -676,7 +1059,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:71</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="155" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:155</a></div>
                             </td>
                         </tr>
 
@@ -703,6 +1086,41 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="cities"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            cities
+                            </b>
+                            <a href="#cities"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>cities:     <code><a href="../interfaces/City.html" target="_self" >City[]</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/City.html" target="_self" >City[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="countries"></a>
                         <span class="name">
                             <b>
@@ -715,24 +1133,19 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>countries:     <code>[]</code>
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>countries:     <code><a href="../interfaces/Country.html" target="_self" >Country[]</a></code>
 </code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>[]</code>
+                            <i>Type : </i>    <code><a href="../interfaces/Country.html" target="_self" >Country[]</a></code>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>[]</code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:13</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:29</a></div>
                             </td>
                         </tr>
 
@@ -772,7 +1185,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:20</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:36</a></div>
                             </td>
                         </tr>
 
@@ -806,7 +1219,77 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:19</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="states"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            states
+                            </b>
+                            <a href="#states"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>states:     <code><a href="../interfaces/State.html" target="_self" >State[]</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/State.html" target="_self" >State[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="subscription"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            subscription
+                            </b>
+                            <a href="#subscription"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>subscription:     <code>Subscription</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:33</a></div>
                             </td>
                         </tr>
 
@@ -846,7 +1329,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:24</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:40</a></div>
                             </td>
                         </tr>
 
@@ -869,27 +1352,27 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>user:     <code><a href="../interfaces/User.html" target="_self" >User</a></code>
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>user:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 </code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="../interfaces/User.html" target="_self" >User</a></code>
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>{
-        email: &#x27;admin@gmail.com&#x27;, fullName: &#x27;Pravin&#x27;,
-        image: &#x27;assets/dist/img/user2-160x160.jpg&#x27;, mobileNumber: &#x27;&#x27;
-    }</code>
+    email: &#x27;admin@gmail.com&#x27;, fullName: &#x27;Pravin&#x27;,
+    image: &#x27;assets/dist/img/user2-160x160.jpg&#x27;, mobileNumber: &#x27;&#x27;
+  }</code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:24</a></div>
                             </td>
                         </tr>
 
@@ -918,7 +1401,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:27</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:43</a></div>
                             </td>
                         </tr>
 
@@ -958,7 +1441,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:41</a></div>
                             </td>
                         </tr>
 
@@ -998,7 +1481,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:22</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:38</a></div>
                             </td>
                         </tr>
 
@@ -1027,7 +1510,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:47</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:66</a></div>
                                 </td>
                             </tr>
 
@@ -1049,7 +1532,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:50</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:69</a></div>
                                 </td>
                             </tr>
 
@@ -1071,7 +1554,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:53</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:72</a></div>
                                 </td>
                             </tr>
 
@@ -1093,7 +1576,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:56</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:75</a></div>
                                 </td>
                             </tr>
 
@@ -1115,7 +1598,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:59</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:78</a></div>
                                 </td>
                             </tr>
 
@@ -1137,7 +1620,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:62</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="81" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:81</a></div>
                                 </td>
                             </tr>
 
@@ -1159,7 +1642,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:65</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:84</a></div>
                                 </td>
                             </tr>
 
@@ -1181,7 +1664,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:83</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="167" class="link-to-prism">src/app/layout/profile/user/user-profile.component.ts:167</a></div>
                                 </td>
                             </tr>
 
@@ -1192,111 +1675,217 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &quot;@angular/core&quot;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, OnDestroy } from &quot;@angular/core&quot;;
 import { WebcamInitError, WebcamImage } from &#x27;ngx-webcam&#x27;;
-import { Subject, Observable } from &#x27;rxjs&#x27;;
+import { Subject, Observable, Subscription } from &#x27;rxjs&#x27;;
 import { User } from &#x27;src/app/models/user.model&#x27;;
 import { FormControl, Validators, FormBuilder } from &#x27;@angular/forms&#x27;;
 import { onSubmitFormGroup } from &#x27;src/app/utils/on-submit-form&#x27;;
+import { CommonService } from &#x27;src/app/core/services/common.service&#x27;;
+import { CommonResponse } from &#x27;src/app/models/common.response&#x27;;
+import { Constants } from &#x27;src/app/core/constants&#x27;;
+import { Country } from &#x27;src/app/models/country.model&#x27;;
+import { State } from &#x27;src/app/models/state.model&#x27;;
+import { City } from &#x27;src/app/models/city.model&#x27;;
+import { ToastrService } from &#x27;ngx-toastr&#x27;;
+import { UserService } from &#x27;src/app/core/services/user.service&#x27;;
+import { SessionService } from &#x27;src/app/core/services/session.service&#x27;;
+import { EmployeeService } from &#x27;src/app/core/services/employee.service&#x27;;
+
 
 @Component({
-    selector: &#x27;app-profile-user&#x27;,
-    templateUrl: &#x27;./user-profile.component.html&#x27;
+  selector: &#x27;app-profile-user&#x27;,
+  templateUrl: &#x27;./user-profile.component.html&#x27;
 })
-export class UserProfileComponent implements OnInit {
-    public countries &#x3D; [];
-    public user: User &#x3D; {
-        email: &#x27;admin@gmail.com&#x27;, fullName: &#x27;Pravin&#x27;,
-        image: &#x27;assets/dist/img/user2-160x160.jpg&#x27;, mobileNumber: &#x27;&#x27;
-    };
+export class UserProfileComponent implements OnInit, OnDestroy {
+  public user: any &#x3D; {
+    email: &#x27;admin@gmail.com&#x27;, fullName: &#x27;Pravin&#x27;,
+    image: &#x27;assets/dist/img/user2-160x160.jpg&#x27;, mobileNumber: &#x27;&#x27;
+  };
 
-    public showWebcam &#x3D; false;
-    public errors: WebcamInitError[] &#x3D; [];
-    // latest snapshot
-    public webcamImage: WebcamImage &#x3D; null;
-    // webcam snapshot trigger
-    private trigger: Subject&lt;void&gt; &#x3D; new Subject&lt;void&gt;();
-    public videoOptions: MediaTrackConstraints &#x3D; {};
+  public countries: Country[];
+  public states: State[];
+  public cities: City[];
 
-    public userProfileFormGroup;
+  private subscription: Subscription;
 
-    constructor(private fb: FormBuilder) {
-        //User profile form group with custom validators
-        this.userProfileFormGroup &#x3D; this.fb.group({
-            fullName: new FormControl(&#x27;&#x27;, [Validators.required, Validators.pattern(/^[A-Za-z -]+$/)]),
-            //fullName: new FormControl(&#x27;&#x27;, [Validators.required, CustomValidators.fullName]),
-            email: new FormControl({ value: &#x27;&#x27;, disabled: true }, [Validators.required, Validators.email]),
-            mobileNumber: new FormControl(&#x27;&#x27;, [Validators.required, Validators.maxLength(10), Validators.minLength(10), Validators.pattern(/[0-9]+/)]),
-            //mobileNumber: new FormControl(&#x27;&#x27;, [Validators.required, CustomValidators.mobileNumber]),
-            address: new FormControl(&#x27;&#x27;, [Validators.pattern(/^[A-Za-z0-9 , . - &#x27; &quot;]+$/)]),
-            //address: new FormControl(&#x27;&#x27;, [CustomValidators.address]),
-            country: new FormControl(&#x27;&#x27;, [Validators.required]),
-            state: new FormControl(&#x27;&#x27;, [Validators.required]),
-            city: new FormControl(&#x27;&#x27;, [Validators.required])
-        });
+  public showWebcam &#x3D; false;
+  public errors: WebcamInitError[] &#x3D; [];
+  // latest snapshot
+  public webcamImage: WebcamImage &#x3D; null;
+  // webcam snapshot trigger
+  private trigger: Subject&lt;void&gt; &#x3D; new Subject&lt;void&gt;();
+  public videoOptions: MediaTrackConstraints &#x3D; {};
 
-        this.userProfileFormGroup.patchValue(this.user);
-    }
+  public userProfileFormGroup;
 
-    get fullName(): FormControl {
-        return this.userProfileFormGroup.get(&#x27;fullName&#x27;);
-    }
-    get email(): FormControl {
-        return this.userProfileFormGroup.get(&#x27;email&#x27;);
-    }
-    get mobileNumber(): FormControl {
-        return this.userProfileFormGroup.get(&#x27;mobileNumber&#x27;);
-    }
-    get address(): FormControl {
-        return this.userProfileFormGroup.get(&#x27;address&#x27;);
-    }
-    get country(): FormControl {
-        return this.userProfileFormGroup.get(&#x27;country&#x27;);
-    }
-    get state(): FormControl {
-        return this.userProfileFormGroup.get(&#x27;state&#x27;);
-    }
-    get city(): FormControl {
-        return this.userProfileFormGroup.get(&#x27;city&#x27;);
-    }
+  constructor(
+    private fb: FormBuilder,
+    private commonService: CommonService,
+    private userService: UserService,
+    private employeeService: EmployeeService,
+    private toastrService: ToastrService,
+    private sessionService: SessionService
+  ) {
+    //User profile form group with custom validators
+    this.userProfileFormGroup &#x3D; this.fb.group({
+      fullName: new FormControl(&#x27;&#x27;, [Validators.required, Validators.pattern(/^[A-Za-z -]+$/)]),
+      email: new FormControl({ value: &#x27;&#x27;, disabled: true }, [Validators.required]),
+      mobileNumber: new FormControl(&#x27;&#x27;, [Validators.required, Validators.maxLength(10), Validators.minLength(10), Validators.pattern(/[0-9]+/)]),
+      country: new FormControl(&#x27;&#x27;, [Validators.required]),
+      state: new FormControl(&#x27;&#x27;, [Validators.required]),
+      city: new FormControl(&#x27;&#x27;, [Validators.required]),
+      address: new FormControl(&#x27;&#x27;, [Validators.pattern(/^[A-Za-z0-9 , . - &#x27; &quot;]+$/)])
+    });
 
-    public ngOnInit() { }
+  }
 
-    public triggerSnapshot(): void {
-        this.trigger.next();
-    }
+  get fullName(): FormControl {
+    return this.userProfileFormGroup.get(&#x27;fullName&#x27;);
+  }
+  get email(): FormControl {
+    return this.userProfileFormGroup.get(&#x27;email&#x27;);
+  }
+  get mobileNumber(): FormControl {
+    return this.userProfileFormGroup.get(&#x27;mobileNumber&#x27;);
+  }
+  get address(): FormControl {
+    return this.userProfileFormGroup.get(&#x27;address&#x27;);
+  }
+  get country(): FormControl {
+    return this.userProfileFormGroup.get(&#x27;country&#x27;);
+  }
+  get state(): FormControl {
+    return this.userProfileFormGroup.get(&#x27;state&#x27;);
+  }
+  get city(): FormControl {
+    return this.userProfileFormGroup.get(&#x27;city&#x27;);
+  }
 
-    public handleInitError(error: WebcamInitError): void {
-        this.errors.push(error);
-    }
+  public ngOnInit() {
+    this.fullName.setValue(this.sessionService.getFullName());
+    this.getCountryList();
 
-    public handleImage(webcamImage: WebcamImage): void {
-        this.webcamImage &#x3D; webcamImage;
-    }
+    this.getUserDetail(this.sessionService.getUserID());
+  }
 
-    public get triggerObservable(): Observable&lt;void&gt; {
-        return this.trigger.asObservable();
-    }
-
-    public stopCamera() {
-        this.showWebcam &#x3D; !this.showWebcam;
-    }
-
-    onSelectFile(event) { // called each time file input changes
-        if (event.target.files &amp;&amp; event.target.files[0]) {
-            var reader &#x3D; new FileReader();
-            reader.readAsDataURL(event.target.files[0]); // read file as data url
-            reader.onload &#x3D; (event: any) &#x3D;&gt; { // called once readAsDataURL is completed                
-                this.user.image &#x3D; event.target.result;
-            }
+  public getUserDetail(userID: string) {
+    this.subscription &#x3D; this.employeeService.getUserDetail(userID)
+      .subscribe((response: CommonResponse) &#x3D;&gt; {
+        if (response.status) {
+          this.user &#x3D; response.data;
+          this.userProfileFormGroup.patchValue(this.user);
+          this.country.setValue(this.user.city.state.country);
+          //this.state.setValue(this.user.city.state.stateId);
+          //this.city.setValue(this.user.city.cityId);
         }
+        else {
+          this.toastrService.error(response.message, Constants.TITLE_ERROR);
+        }
+      }, error &#x3D;&gt; {
+        this.toastrService.error(error.error.message, Constants.TITLE_ERROR);
+      })
+  }
+
+  public getCountryList() {
+    this.subscription &#x3D; this.commonService.getCountryList()
+      .subscribe((response: CommonResponse) &#x3D;&gt; {
+        if (response.status) {
+          this.countries &#x3D; response.data;
+        }
+        else {
+          this.toastrService.error(response.message, Constants.TITLE_ERROR);
+        }
+      }, error &#x3D;&gt; {
+        this.toastrService.error(error.error.message, Constants.TITLE_ERROR);
+      })
+  }
+
+  public getStateList(country: Country) {
+    this.subscription &#x3D; this.commonService.getStateList(country.countryId)
+      .subscribe((response: CommonResponse) &#x3D;&gt; {
+        if (response.status) {
+          this.states &#x3D; response.data;
+        }
+        else {
+          this.toastrService.error(response.message, Constants.TITLE_ERROR);
+        }
+      }, error &#x3D;&gt; {
+        this.toastrService.error(error.error.message, Constants.TITLE_ERROR);
+      })
+  }
+
+  public getCityList(state: State) {
+    this.subscription &#x3D; this.commonService.getCityList(state.stateId)
+      .subscribe((response: CommonResponse) &#x3D;&gt; {
+        if (response.status) {
+          this.cities &#x3D; response.data;
+        }
+        else {
+          this.toastrService.error(response.message, Constants.TITLE_ERROR);
+        }
+      }, error &#x3D;&gt; {
+        this.toastrService.error(error.error.message, Constants.TITLE_ERROR);
+      })
+  }
+
+  public triggerSnapshot(): void {
+    this.trigger.next();
+  }
+
+  public handleInitError(error: WebcamInitError): void {
+    this.errors.push(error);
+  }
+
+  public handleImage(webcamImage: WebcamImage): void {
+    this.webcamImage &#x3D; webcamImage;
+  }
+
+  public get triggerObservable(): Observable&lt;void&gt; {
+    return this.trigger.asObservable();
+  }
+
+  public stopCamera() {
+    this.showWebcam &#x3D; !this.showWebcam;
+  }
+
+  onSelectFile(event) { // called each time file input changes
+    if (event.target.files &amp;&amp; event.target.files[0]) {
+      var reader &#x3D; new FileReader();
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
+      reader.onload &#x3D; (event: any) &#x3D;&gt; { // called once readAsDataURL is completed                
+        this.user.image &#x3D; event.target.result;
+      }
     }
-    public onSubmitUserProfile(formGroup) {
-        if (formGroup.invalid)
-            onSubmitFormGroup(formGroup);
-        let user &#x3D; formGroup.value;
-        console.log(user);
+  }
+  public onSubmitUserProfile(formGroup) {
+    if (formGroup.invalid) {
+      onSubmitFormGroup(formGroup);
+      return;
     }
+    let user &#x3D; formGroup.value;
+    user.email &#x3D; this.user.email;
+    user.role &#x3D; this.user.role;
+    console.log(user);
+    user.userId &#x3D; this.sessionService.getUserID();
+
+    this.subscription &#x3D; this.userService.updateUser(user)
+      .subscribe((response: CommonResponse) &#x3D;&gt; {
+        if (response.status) {
+          this.toastrService.success(response.message, Constants.TITLE_SUCCESS);
+        }
+        else {
+          this.toastrService.error(response.message, Constants.TITLE_ERROR);
+        }
+      }, error &#x3D;&gt; {
+        this.toastrService.error(error.error.message, Constants.TITLE_ERROR);
+      })
+  }
+
+  ngOnDestroy() {
+    if (this.subscription !&#x3D; null &amp;&amp; this.subscription !&#x3D;&#x3D; undefined)
+      this.subscription.unsubscribe();
+  }
 
 }</code></pre>
     </div>
@@ -1320,9 +1909,10 @@ export class UserProfileComponent implements OnInit {
         &lt;div class&#x3D;&quot;box-body&quot;&gt;
             &lt;div class&#x3D;&quot;row&quot;&gt;
                 &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
-                    &lt;img [src]&#x3D;&quot;user.image&quot; class&#x3D;&quot;thumbnail&quot; height&#x3D;&quot;220&quot; width&#x3D;&quot;220&quot;&gt;
+                    &lt;img [src]&#x3D;&quot;user.image&quot; class&#x3D;&quot;thumbnail&quot; height&#x3D;&quot;220&quot; width&#x3D;&quot;220&quot; /&gt;
 
-                    &lt;button class&#x3D;&quot;btn btn-sm btn-primary&quot; data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#cameraModal&quot; (click)&#x3D;&quot;showWebcam &#x3D; true&quot;&gt;
+                    &lt;button class&#x3D;&quot;btn btn-sm btn-primary&quot; data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#cameraModal&quot;
+                        (click)&#x3D;&quot;showWebcam &#x3D; true&quot;&gt;
                         &lt;i class&#x3D;&quot;fa fa-camera&quot;&gt;&lt;/i&gt; Take Photo
                     &lt;/button&gt; &amp;nbsp;
 
@@ -1335,23 +1925,27 @@ export class UserProfileComponent implements OnInit {
                                 &lt;label for&#x3D;&quot;fullName&quot;&gt; Full Name &lt;span class&#x3D;&quot;text-danger&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
                                 &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; name&#x3D;&quot;fullName&quot; formControlName&#x3D;&quot;fullName&quot; /&gt;
 
-                                &lt;div *ngIf&#x3D;&quot;fullName.errors &amp;&amp; (fullName.invalid &amp;&amp; fullName.touched)&quot; class&#x3D;&quot;text-danger&quot;&gt;
+                                &lt;div *ngIf&#x3D;&quot;fullName.errors &amp;&amp; (fullName.invalid &amp;&amp; fullName.touched)&quot;
+                                    class&#x3D;&quot;text-danger&quot;&gt;
                                     &lt;span *ngIf&#x3D;&quot;fullName.errors?.required&quot;&gt;Please enter full name&lt;/span&gt;
                                     &lt;span *ngIf&#x3D;&quot;fullName.errors?.pattern&quot;&gt;Full name be in characters only&lt;/span&gt;
                                 &lt;/div&gt;
-
                             &lt;/div&gt;
-                            &lt;div class&#x3D;&quot;form-group&quot;&gt;
-                                &lt;label for&#x3D;&quot;email&quot;&gt; Email ID &lt;span class&#x3D;&quot;text-danger&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
-                                &lt;input type&#x3D;&quot;email&quot; class&#x3D;&quot;form-control&quot; name&#x3D;&quot;email&quot; formControlName&#x3D;&quot;email&quot; /&gt;
+
+                            &lt;div class&#x3D;&quot;form-group has-feedback&quot;&gt;
+                                &lt;input type&#x3D;&quot;email&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Email&quot; formControlName&#x3D;&quot;email&quot;&gt;
+                                &lt;span class&#x3D;&quot;glyphicon glyphicon-envelope form-control-feedback&quot;&gt;&lt;/span&gt;
 
                                 &lt;div *ngIf&#x3D;&quot;email.errors &amp;&amp; (email.invalid &amp;&amp; email.touched)&quot; class&#x3D;&quot;text-danger&quot;&gt;
-                                    &lt;span *ngIf&#x3D;&quot;email.errors?.required&quot;&gt; Please enter email&lt;/span&gt;
+                                    &lt;span *ngIf&#x3D;&quot;email.errors?.required&quot;&gt;Please enter emailID&lt;/span&gt;
+                                    &lt;span *ngIf&#x3D;&quot;email.errors?.pattern&quot;&gt;Please enter valid emailID&lt;/span&gt;
                                 &lt;/div&gt;
                             &lt;/div&gt;
+
                             &lt;div class&#x3D;&quot;form-group&quot;&gt;
                                 &lt;label for&#x3D;&quot;mobileNumber&quot;&gt; Mobile Number &lt;span class&#x3D;&quot;text-danger&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
-                                &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; name&#x3D;&quot;mobileNumber&quot; formControlName&#x3D;&quot;mobileNumber&quot; /&gt;
+                                &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; name&#x3D;&quot;mobileNumber&quot;
+                                    formControlName&#x3D;&quot;mobileNumber&quot; /&gt;
 
                                 &lt;div *ngIf&#x3D;&quot;mobileNumber.errors &amp;&amp; (mobileNumber.invalid &amp;&amp; mobileNumber.touched)&quot;
                                     class&#x3D;&quot;text-danger&quot;&gt;
@@ -1363,22 +1957,14 @@ export class UserProfileComponent implements OnInit {
                                     &lt;span *ngIf&#x3D;&quot;mobileNumber.errors?.mobilenumber&quot;&gt;{{mobileNumber.errors?.mobilenumber.value}}&lt;/span&gt; --&gt;
                                 &lt;/div&gt;
                             &lt;/div&gt;
-                            &lt;div class&#x3D;&quot;form-group&quot;&gt;
-                                &lt;label for&#x3D;&quot;address&quot;&gt; Address&lt;/label&gt;
-                                &lt;textarea rows&#x3D;&quot;4&quot; cols&#x3D;&quot;5&quot; class&#x3D;&quot;form-control&quot; name&#x3D;&quot;address&quot; formControlName&#x3D;&quot;address&quot;&gt; &lt;/textarea&gt;
 
-                                &lt;div *ngIf&#x3D;&quot;address.errors &amp;&amp; (address.invalid &amp;&amp; address.touched)&quot; class&#x3D;&quot;text-danger&quot;&gt;
-                                    &lt;span *ngIf&#x3D;&quot;address.errors?.required&quot;&gt;Please enter address&lt;/span&gt;
-                                    &lt;span *ngIf&#x3D;&quot;address.errors?.pattern&quot;&gt;Special characters not allowed except &#x27; &#x27;
-                                        &amp; &quot; &quot; &lt;/span&gt;
-                                    &lt;!-- &lt;span *ngIf&#x3D;&quot;address.errors?.address&quot;&gt;{{address.errors?.address.value}}&lt;/span&gt; --&gt;
-                                &lt;/div&gt;
-                            &lt;/div&gt;
                             &lt;div class&#x3D;&quot;form-group&quot;&gt;
                                 &lt;label for&#x3D;&quot;country&quot;&gt; Country &lt;span class&#x3D;&quot;text-danger&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
-                                &lt;select class&#x3D;&quot;form-control&quot; name&#x3D;&quot;country&quot; formControlName&#x3D;&quot;country&quot;&gt;
+                                &lt;select class&#x3D;&quot;form-control&quot; name&#x3D;&quot;country&quot; formControlName&#x3D;&quot;country&quot;
+                                    (ngModelChange)&#x3D;&quot;getStateList(country.value)&quot;&gt;
                                     &lt;option&gt;Select Country&lt;/option&gt;
-                                    &lt;option *ngFor&#x3D;&quot;let country of countries&quot;&gt;{{country.name}} &lt;/option&gt;
+                                    &lt;option *ngFor&#x3D;&quot;let country of countries&quot; [ngValue]&#x3D;&quot;country&quot;&gt;
+                                        {{country.countryName}} &lt;/option&gt;
 
                                 &lt;/select&gt;
 
@@ -1388,8 +1974,10 @@ export class UserProfileComponent implements OnInit {
                             &lt;/div&gt;
                             &lt;div class&#x3D;&quot;form-group&quot;&gt;
                                 &lt;label for&#x3D;&quot;state&quot;&gt; State &lt;span class&#x3D;&quot;text-danger&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
-                                &lt;select class&#x3D;&quot;form-control&quot; name&#x3D;&quot;state&quot; formControlName&#x3D;&quot;state&quot;&gt;
+                                &lt;select class&#x3D;&quot;form-control&quot; name&#x3D;&quot;state&quot; formControlName&#x3D;&quot;state&quot;
+                                    (ngModelChange)&#x3D;&quot;getCityList(state.value)&quot;&gt;
                                     &lt;option&gt;Select State&lt;/option&gt;
+                                    &lt;option *ngFor&#x3D;&quot;let state of states&quot; [ngValue]&#x3D;&quot;state&quot;&gt;{{state.stateName}} &lt;/option&gt;
                                 &lt;/select&gt;
 
                                 &lt;div *ngIf&#x3D;&quot;state.errors &amp;&amp; (state.invalid &amp;&amp; state.touched)&quot; class&#x3D;&quot;text-danger&quot;&gt;
@@ -1400,10 +1988,23 @@ export class UserProfileComponent implements OnInit {
                                 &lt;label for&#x3D;&quot;city&quot;&gt; City &lt;span class&#x3D;&quot;text-danger&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
                                 &lt;select class&#x3D;&quot;form-control&quot; name&#x3D;&quot;city&quot; formControlName&#x3D;&quot;city&quot;&gt;
                                     &lt;option&gt;Select City&lt;/option&gt;
+                                    &lt;option *ngFor&#x3D;&quot;let city of cities&quot; [ngValue]&#x3D;&quot;city&quot;&gt;{{city.cityName}} &lt;/option&gt;
                                 &lt;/select&gt;
 
                                 &lt;div *ngIf&#x3D;&quot;city.errors &amp;&amp; (city.invalid &amp;&amp; city.touched)&quot; class&#x3D;&quot;text-danger&quot;&gt;
                                     &lt;span *ngIf&#x3D;&quot;city.errors?.required&quot;&gt;Please enter city&lt;/span&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                &lt;label for&#x3D;&quot;address&quot;&gt; Address&lt;/label&gt;
+                                &lt;textarea rows&#x3D;&quot;4&quot; cols&#x3D;&quot;5&quot; class&#x3D;&quot;form-control&quot; name&#x3D;&quot;address&quot;
+                                    formControlName&#x3D;&quot;address&quot;&gt; &lt;/textarea&gt;
+
+                                &lt;div *ngIf&#x3D;&quot;address.errors &amp;&amp; (address.invalid &amp;&amp; address.touched)&quot; class&#x3D;&quot;text-danger&quot;&gt;
+                                    &lt;span *ngIf&#x3D;&quot;address.errors?.required&quot;&gt;Please enter address&lt;/span&gt;
+                                    &lt;span *ngIf&#x3D;&quot;address.errors?.pattern&quot;&gt;Special characters not allowed except &#x27; &#x27;
+                                        &amp; &quot; &quot; &lt;/span&gt;
+                                    &lt;!-- &lt;span *ngIf&#x3D;&quot;address.errors?.address&quot;&gt;{{address.errors?.address.value}}&lt;/span&gt; --&gt;
                                 &lt;/div&gt;
                             &lt;/div&gt;
                             &lt;div class&#x3D;&quot;form-group&quot;&gt;
@@ -1427,15 +2028,17 @@ export class UserProfileComponent implements OnInit {
             &lt;div class&#x3D;&quot;modal-body&quot;&gt;
                 &lt;div class&#x3D;&quot;row&quot;&gt;
                     &lt;div class&#x3D;&quot;col-md-12&quot;&gt;
-                        &lt;webcam [width]&#x3D;&quot;600&quot; [height]&#x3D;&quot;400&quot; [trigger]&#x3D;&quot;triggerObservable&quot; (imageCapture)&#x3D;&quot;handleImage($event)&quot;
-                            *ngIf&#x3D;&quot;showWebcam&quot; [videoOptions]&#x3D;&quot;videoOptions&quot; (initError)&#x3D;&quot;handleInitError($event)&quot;&gt;&lt;/webcam&gt;
+                        &lt;webcam [width]&#x3D;&quot;600&quot; [height]&#x3D;&quot;400&quot; [trigger]&#x3D;&quot;triggerObservable&quot;
+                            (imageCapture)&#x3D;&quot;handleImage($event)&quot; *ngIf&#x3D;&quot;showWebcam&quot; [videoOptions]&#x3D;&quot;videoOptions&quot;
+                            (initError)&#x3D;&quot;handleInitError($event)&quot;&gt;&lt;/webcam&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;div class&#x3D;&quot;modal-footer&quot;&gt;
                 &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary&quot; (click)&#x3D;&quot;triggerSnapshot();&quot; data-dismiss&#x3D;&quot;modal&quot;
                     data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#confirmModal&quot;&gt;Capture Image&lt;/button&gt;
-                &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-default&quot; data-dismiss&#x3D;&quot;modal&quot; (click)&#x3D;&quot;showWebcam &#x3D; false&quot;&gt;Close&lt;/button&gt;
+                &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-default&quot; data-dismiss&#x3D;&quot;modal&quot;
+                    (click)&#x3D;&quot;showWebcam &#x3D; false&quot;&gt;Close&lt;/button&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
@@ -1454,7 +2057,8 @@ export class UserProfileComponent implements OnInit {
             &lt;/div&gt;
 
             &lt;div class&#x3D;&quot;modal-footer&quot;&gt;
-                &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-success&quot; data-dismiss&#x3D;&quot;modal&quot; (click)&#x3D;&quot;user.image &#x3D; webcamImage.imageAsDataUrl;showWebcam&#x3D;false&quot;&gt;Yes&lt;/button&gt;
+                &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-success&quot; data-dismiss&#x3D;&quot;modal&quot;
+                    (click)&#x3D;&quot;user.image &#x3D; webcamImage.imageAsDataUrl;showWebcam&#x3D;false&quot;&gt;Yes&lt;/button&gt;
                 &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-danger&quot; data-dismiss&#x3D;&quot;modal&quot; (click)&#x3D;&quot;showWebcam&#x3D;false&quot;&gt;No&lt;/button&gt;
             &lt;/div&gt;
         &lt;/div&gt;
@@ -1488,7 +2092,7 @@ export class UserProfileComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><section class="content-header">    <h1>        User Profile        <small>Control panel</small>    </h1>    <ol class="breadcrumb">        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>        <li class="active">Dashboard</li>    </ol></section><section class="content">    <div class="box box-success">        <div class="box-header with-border">            <h3 class="box-title">User Profile</h3>        </div>        <div class="box-body">            <div class="row">                <div class="col-md-4">                    <img [src]="user.image" class="thumbnail" height="220" width="220">                    <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#cameraModal" (click)="showWebcam = true">                        <i class="fa fa-camera"></i> Take Photo                    </button> &nbsp;                    <input type="file" class="btn btn-sm" value="Browse Photo" (change)="onSelectFile($event)" />                </div>                <div class="col-md-6">                    <div class="row">                        <form [formGroup]="userProfileFormGroup" (ngSubmit)="onSubmitUserProfile(userProfileFormGroup)">                            <div class="form-group">                                <label for="fullName"> Full Name <span class="text-danger">*</span></label>                                <input type="text" class="form-control" name="fullName" formControlName="fullName" />                                <div *ngIf="fullName.errors && (fullName.invalid && fullName.touched)" class="text-danger">                                    <span *ngIf="fullName.errors?.required">Please enter full name</span>                                    <span *ngIf="fullName.errors?.pattern">Full name be in characters only</span>                                </div>                            </div>                            <div class="form-group">                                <label for="email"> Email ID <span class="text-danger">*</span></label>                                <input type="email" class="form-control" name="email" formControlName="email" />                                <div *ngIf="email.errors && (email.invalid && email.touched)" class="text-danger">                                    <span *ngIf="email.errors?.required"> Please enter email</span>                                </div>                            </div>                            <div class="form-group">                                <label for="mobileNumber"> Mobile Number <span class="text-danger">*</span></label>                                <input type="text" class="form-control" name="mobileNumber" formControlName="mobileNumber" />                                <div *ngIf="mobileNumber.errors && (mobileNumber.invalid && mobileNumber.touched)"                                    class="text-danger">                                    <span *ngIf="mobileNumber.errors?.required">Please enter mobile Number</span>                                    <span *ngIf="mobileNumber.errors?.minlength || mobileNumber.errors?.maxlength">                                        Mobile Number must be 10 digit</span>                                    <span *ngIf="mobileNumber.errors?.pattern">Mobile Number must be digit</span>                                    <!-- <span *ngIf="mobileNumber.errors?.required">Please enter mobile Number</span>                                    <span *ngIf="mobileNumber.errors?.mobilenumber">{{mobileNumber.errors?.mobilenumber.value}}</span> -->                                </div>                            </div>                            <div class="form-group">                                <label for="address"> Address</label>                                <textarea rows="4" cols="5" class="form-control" name="address" formControlName="address"> </textarea>                                <div *ngIf="address.errors && (address.invalid && address.touched)" class="text-danger">                                    <span *ngIf="address.errors?.required">Please enter address</span>                                    <span *ngIf="address.errors?.pattern">Special characters not allowed except \' \'                                        & " " </span>                                    <!-- <span *ngIf="address.errors?.address">{{address.errors?.address.value}}</span> -->                                </div>                            </div>                            <div class="form-group">                                <label for="country"> Country <span class="text-danger">*</span></label>                                <select class="form-control" name="country" formControlName="country">                                    <option>Select Country</option>                                    <option *ngFor="let country of countries">{{country.name}} </option>                                </select>                                <div *ngIf="country.errors && (country.invalid && country.touched)" class="text-danger">                                    <span *ngIf="country.errors?.required">Please enter country</span>                                </div>                            </div>                            <div class="form-group">                                <label for="state"> State <span class="text-danger">*</span></label>                                <select class="form-control" name="state" formControlName="state">                                    <option>Select State</option>                                </select>                                <div *ngIf="state.errors && (state.invalid && state.touched)" class="text-danger">                                    <span *ngIf="state.errors?.required">Please enter state</span>                                </div>                            </div>                            <div class="form-group">                                <label for="city"> City <span class="text-danger">*</span></label>                                <select class="form-control" name="city" formControlName="city">                                    <option>Select City</option>                                </select>                                <div *ngIf="city.errors && (city.invalid && city.touched)" class="text-danger">                                    <span *ngIf="city.errors?.required">Please enter city</span>                                </div>                            </div>                            <div class="form-group">                                <button class="btn btn-sm btn-primary" type="submit"> Update </button>                            </div>                        </form>                    </div>                </div>            </div>        </div>    </div></section><div id="cameraModal" class="modal fade" role="dialog">    <div class="modal-dialog">        <div class="modal-content">            <div class="modal-header">                <button type="button" class="close" data-dismiss="modal" (click)="showWebcam = false">&times;</button>                <h4 class="modal-title">Capture Image From Camera</h4>            </div>            <div class="modal-body">                <div class="row">                    <div class="col-md-12">                        <webcam [width]="600" [height]="400" [trigger]="triggerObservable" (imageCapture)="handleImage($event)"                            *ngIf="showWebcam" [videoOptions]="videoOptions" (initError)="handleInitError($event)"></webcam>                    </div>                </div>            </div>            <div class="modal-footer">                <button type="button" class="btn btn-primary" (click)="triggerSnapshot();" data-dismiss="modal"                    data-toggle="modal" data-target="#confirmModal">Capture Image</button>                <button type="button" class="btn btn-default" data-dismiss="modal" (click)="showWebcam = false">Close</button>            </div>        </div>    </div></div><div id="confirmModal" class="modal fade" role="dialog">    <div class="modal-dialog">        <div class="modal-content">            <div class="modal-header">                <button type="button" class="close" data-dismiss="modal">&times;</button>                <h4 class="modal-title">Do you wants to use captured Image as profile pick</h4>            </div>            <div class="moda-body">                <img [src]="webcamImage.imageAsDataUrl" width="600" height="400" *ngIf="webcamImage" />            </div>            <div class="modal-footer">                <button type="button" class="btn btn-success" data-dismiss="modal" (click)="user.image = webcamImage.imageAsDataUrl;showWebcam=false">Yes</button>                <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="showWebcam=false">No</button>            </div>        </div>    </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><section class="content-header">    <h1>        User Profile        <small>Control panel</small>    </h1>    <ol class="breadcrumb">        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>        <li class="active">Dashboard</li>    </ol></section><section class="content">    <div class="box box-success">        <div class="box-header with-border">            <h3 class="box-title">User Profile</h3>        </div>        <div class="box-body">            <div class="row">                <div class="col-md-4">                    <img [src]="user.image" class="thumbnail" height="220" width="220" />                    <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#cameraModal"                        (click)="showWebcam = true">                        <i class="fa fa-camera"></i> Take Photo                    </button> &nbsp;                    <input type="file" class="btn btn-sm" value="Browse Photo" (change)="onSelectFile($event)" />                </div>                <div class="col-md-6">                    <div class="row">                        <form [formGroup]="userProfileFormGroup" (ngSubmit)="onSubmitUserProfile(userProfileFormGroup)">                            <div class="form-group">                                <label for="fullName"> Full Name <span class="text-danger">*</span></label>                                <input type="text" class="form-control" name="fullName" formControlName="fullName" />                                <div *ngIf="fullName.errors && (fullName.invalid && fullName.touched)"                                    class="text-danger">                                    <span *ngIf="fullName.errors?.required">Please enter full name</span>                                    <span *ngIf="fullName.errors?.pattern">Full name be in characters only</span>                                </div>                            </div>                            <div class="form-group has-feedback">                                <input type="email" class="form-control" placeholder="Email" formControlName="email">                                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>                                <div *ngIf="email.errors && (email.invalid && email.touched)" class="text-danger">                                    <span *ngIf="email.errors?.required">Please enter emailID</span>                                    <span *ngIf="email.errors?.pattern">Please enter valid emailID</span>                                </div>                            </div>                            <div class="form-group">                                <label for="mobileNumber"> Mobile Number <span class="text-danger">*</span></label>                                <input type="text" class="form-control" name="mobileNumber"                                    formControlName="mobileNumber" />                                <div *ngIf="mobileNumber.errors && (mobileNumber.invalid && mobileNumber.touched)"                                    class="text-danger">                                    <span *ngIf="mobileNumber.errors?.required">Please enter mobile Number</span>                                    <span *ngIf="mobileNumber.errors?.minlength || mobileNumber.errors?.maxlength">                                        Mobile Number must be 10 digit</span>                                    <span *ngIf="mobileNumber.errors?.pattern">Mobile Number must be digit</span>                                    <!-- <span *ngIf="mobileNumber.errors?.required">Please enter mobile Number</span>                                    <span *ngIf="mobileNumber.errors?.mobilenumber">{{mobileNumber.errors?.mobilenumber.value}}</span> -->                                </div>                            </div>                            <div class="form-group">                                <label for="country"> Country <span class="text-danger">*</span></label>                                <select class="form-control" name="country" formControlName="country"                                    (ngModelChange)="getStateList(country.value)">                                    <option>Select Country</option>                                    <option *ngFor="let country of countries" [ngValue]="country">                                        {{country.countryName}} </option>                                </select>                                <div *ngIf="country.errors && (country.invalid && country.touched)" class="text-danger">                                    <span *ngIf="country.errors?.required">Please enter country</span>                                </div>                            </div>                            <div class="form-group">                                <label for="state"> State <span class="text-danger">*</span></label>                                <select class="form-control" name="state" formControlName="state"                                    (ngModelChange)="getCityList(state.value)">                                    <option>Select State</option>                                    <option *ngFor="let state of states" [ngValue]="state">{{state.stateName}} </option>                                </select>                                <div *ngIf="state.errors && (state.invalid && state.touched)" class="text-danger">                                    <span *ngIf="state.errors?.required">Please enter state</span>                                </div>                            </div>                            <div class="form-group">                                <label for="city"> City <span class="text-danger">*</span></label>                                <select class="form-control" name="city" formControlName="city">                                    <option>Select City</option>                                    <option *ngFor="let city of cities" [ngValue]="city">{{city.cityName}} </option>                                </select>                                <div *ngIf="city.errors && (city.invalid && city.touched)" class="text-danger">                                    <span *ngIf="city.errors?.required">Please enter city</span>                                </div>                            </div>                            <div class="form-group">                                <label for="address"> Address</label>                                <textarea rows="4" cols="5" class="form-control" name="address"                                    formControlName="address"> </textarea>                                <div *ngIf="address.errors && (address.invalid && address.touched)" class="text-danger">                                    <span *ngIf="address.errors?.required">Please enter address</span>                                    <span *ngIf="address.errors?.pattern">Special characters not allowed except \' \'                                        & " " </span>                                    <!-- <span *ngIf="address.errors?.address">{{address.errors?.address.value}}</span> -->                                </div>                            </div>                            <div class="form-group">                                <button class="btn btn-sm btn-primary" type="submit"> Update </button>                            </div>                        </form>                    </div>                </div>            </div>        </div>    </div></section><div id="cameraModal" class="modal fade" role="dialog">    <div class="modal-dialog">        <div class="modal-content">            <div class="modal-header">                <button type="button" class="close" data-dismiss="modal" (click)="showWebcam = false">&times;</button>                <h4 class="modal-title">Capture Image From Camera</h4>            </div>            <div class="modal-body">                <div class="row">                    <div class="col-md-12">                        <webcam [width]="600" [height]="400" [trigger]="triggerObservable"                            (imageCapture)="handleImage($event)" *ngIf="showWebcam" [videoOptions]="videoOptions"                            (initError)="handleInitError($event)"></webcam>                    </div>                </div>            </div>            <div class="modal-footer">                <button type="button" class="btn btn-primary" (click)="triggerSnapshot();" data-dismiss="modal"                    data-toggle="modal" data-target="#confirmModal">Capture Image</button>                <button type="button" class="btn btn-default" data-dismiss="modal"                    (click)="showWebcam = false">Close</button>            </div>        </div>    </div></div><div id="confirmModal" class="modal fade" role="dialog">    <div class="modal-dialog">        <div class="modal-content">            <div class="modal-header">                <button type="button" class="close" data-dismiss="modal">&times;</button>                <h4 class="modal-title">Do you wants to use captured Image as profile pick</h4>            </div>            <div class="moda-body">                <img [src]="webcamImage.imageAsDataUrl" width="600" height="400" *ngIf="webcamImage" />            </div>            <div class="modal-footer">                <button type="button" class="btn btn-success" data-dismiss="modal"                    (click)="user.image = webcamImage.imageAsDataUrl;showWebcam=false">Yes</button>                <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="showWebcam=false">No</button>            </div>        </div>    </div></div></div>'
     var COMPONENTS = [{'name': 'ActionComponent', 'selector': 'ag-clickable'},{'name': 'ActionParentComponent', 'selector': 'clickable-cell'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthComponent', 'selector': 'app-auth-component'},{'name': 'CompanyProfileComponent', 'selector': 'app-profile-company'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'EmployeeListComponent', 'selector': 'app-employee-list'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotPasswordComponent', 'selector': 'app-forgot-password'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LayoutComponent', 'selector': 'app-layout'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'TestingComponent', 'selector': 'app-test'},{'name': 'UpdatePasswordComponent', 'selector': 'app-update-password'},{'name': 'UserProfileComponent', 'selector': 'app-profile-user'}];
     var DIRECTIVES = [{'name': 'StatusDirective', 'selector': '[status]'}];
     var ACTUAL_COMPONENT = {'name': 'UserProfileComponent'};

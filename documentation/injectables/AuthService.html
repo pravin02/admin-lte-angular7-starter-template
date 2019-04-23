@@ -188,7 +188,7 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">
-<code>forgotPassword(user)</code>
+<code>forgotPassword(email: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
                     </td>
                 </tr>
 
@@ -209,12 +209,16 @@
                                         <thead>
                                             <tr>
                                                 <td>Name</td>
+                                                    <td>Type</td>
                                                 <td>Optional</td>
                                             </tr>
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>user</td>
+                                                        <td>email</td>
+                                                        <td>
+                                                                    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
                                                     
                                                     <td>
                                                             No
@@ -641,15 +645,15 @@ export class AuthService {
     constructor(public api: Api) { }
 
     login(user: User) {
-        return this.api.post(&#x27;auth/doctor/signin&#x27;, user);
+        return this.api.post(&#x27;authentication&#x27;, user);
     }
 
     register(user: User) {
-        return this.api.post(&#x27;auth/doctor/signup&#x27;, user);
+        return this.api.post(&#x27;signup&#x27;, user);
     }
 
-    forgotPassword(user) {
-        return this.api.post(&#x27;User/ForgotPassword&#x27;, user);
+    forgotPassword(email: any) {
+        return this.api.post(&#x27;forgot/password&#x27;, email);
     }
 
     updateUserProfile(user: User) {
@@ -660,7 +664,7 @@ export class AuthService {
         return this.api.get(&#x27;User/Profile/&#x27; + userID);
     }
     updatePassword(user: User) {
-        return this.api.post(&#x27;user/ChangePassword&#x27;, user);
+        return this.api.post(&#x27;update/password&#x27;, user);
     }
 }</code></pre>
     </div>
