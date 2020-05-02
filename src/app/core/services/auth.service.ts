@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Api } from '../providers/api';
 import { User } from 'src/app/models/user.model';
+import { AppService } from 'src/app/app.service';
 
 @Injectable()
 export class AuthService {
 
-    constructor(public api: Api) { }
+    constructor(public api: Api, private appService: AppService) { }
 
     login(user: User) {
-        return this.api.post('authentication', user);
+        return this.api.get(this.appService.getUrl() + 'login.json', user);
     }
 
     register(user: User) {

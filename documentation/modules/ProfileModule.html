@@ -184,10 +184,10 @@ import { CompanyProfileComponent } from &#x27;./company/company-profile.componen
 import { UpdatePasswordComponent } from &#x27;./update-password/update-password.component&#x27;;
 
 const routes: Routes &#x3D; [
+    { path: &#x27;&#x27;, redirectTo: &#x27;user&#x27;, pathMatch: &#x27;full&#x27; },
     { path: &#x27;user&#x27;, component: UserProfileComponent, data: { title: &#x27;User Profile&#x27; } },
     { path: &#x27;company&#x27;, component: CompanyProfileComponent, data: { title: &#x27;Company Profile&#x27; } },
-    { path: &#x27;update-password&#x27;, component: UpdatePasswordComponent, data: { title: &#x27;Update Password&#x27; } },
-    { path: &#x27;&#x27;, redirectTo: &#x27;user&#x27;, pathMatch: &#x27;full&#x27; }
+    { path: &#x27;update-password&#x27;, component: UpdatePasswordComponent, data: { title: &#x27;Update Password&#x27; } }
 ]
 
 @NgModule({
@@ -216,6 +216,7 @@ export class ProfileModule {
 
 
 
+                   
 
 
 

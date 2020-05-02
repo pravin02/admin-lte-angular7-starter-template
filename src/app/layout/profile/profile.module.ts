@@ -10,10 +10,10 @@ import { CompanyProfileComponent } from './company/company-profile.component';
 import { UpdatePasswordComponent } from './update-password/update-password.component';
 
 const routes: Routes = [
+    { path: '', redirectTo: 'user', pathMatch: 'full' },
     { path: 'user', component: UserProfileComponent, data: { title: 'User Profile' } },
     { path: 'company', component: CompanyProfileComponent, data: { title: 'Company Profile' } },
-    { path: 'update-password', component: UpdatePasswordComponent, data: { title: 'Update Password' } },
-    { path: '', redirectTo: 'user', pathMatch: 'full' }
+    { path: 'update-password', component: UpdatePasswordComponent, data: { title: 'Update Password' } }
 ]
 
 @NgModule({

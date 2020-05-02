@@ -15,13 +15,16 @@ import { BaseUrlProvider } from './core/providers/base.url.provider';
 import { SessionService } from './core/services/session.service';
 import { CommonService } from './core/services/common.service';
 import { JWTUtils } from './core/services/jwt.utils';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TokenInterceptor } from './core/interceptors/token.interceptor';
 import { TitleCasePipe } from '@angular/common';
 
 import { KeyboardShortcutsModule, KeyboardShortcutsService } from 'ng-keyboard-shortcuts';
 import { UserService } from './core/services/user.service';
 import { EmployeeService } from './core/services/employee.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { AppService } from './app.service';
 
 const routes: Routes = [
   { path: '', loadChildren: "./layout/layout.module#LayoutModule" },
@@ -35,62 +38,65 @@ const routes: Routes = [
   ],
   imports: [
     KeyboardShortcutsModule,
-    AuthModule,   
+    AuthModule,
     BrowserModule,
-    BrowserAnimationsModule,    
+    BrowserAnimationsModule,
     ToastrModule.forRoot(),
     RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload' }),
-    
+
     BlockUIModule.forRoot(), // Import BlockUIModule
-    BlockUIHttpModule.forRoot(), // Import Block UI Http Module
-    
+    BlockUIHttpModule.forRoot(), ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), // Import Block UI Http Module
+    HttpClientModule
+
   ],
   exports: [RouterModule],
   providers: [
     TitleCasePipe,
-      {
+    {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
       multi: true
     },
     JWTUtils,
-    BaseUrlProvider, 
-    Api, 
+    BaseUrlProvider,
     SessionService,
-    AuthService, 
+    AuthService,
     CommonService,
     UserService,
     EmployeeService,
-    KeyboardShortcutsService],
+    KeyboardShortcutsService,
+    AppService
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
-  
-  constructor(private keyboard: KeyboardShortcutsService, ) {    
+
+export class AppModule {
+
+  constructor(private keyboard: KeyboardShortcutsService) {
     this.keyboard.add([
-         {
-             key: 'ctrl f',
-             command: () => console.log('ctrl + f')
-         },
-         {
-          key: 'ctrl p',
-          command: () => console.log('ctrl + p')
+      {
+        key: 'ctrl f',
+        command: () => console.log('ctrl + f')
       },
-         {
-             key: 'ctrl shift f',
-             command: () => console.log('ctrl + shift + f'),             
-         },
-         {
-             key: 'cmd f',
-             command: () => console.log('cmd + f'),
-             preventDefault: true
-         }
-     ]);
+      {
+        key: 'ctrl p',
+        command: () => console.log('ctrl + p')
+      },
+      {
+        key: 'ctrl shift f',
+        command: () => console.log('ctrl + shift + f'),
+      },
+      {
+        key: 'cmd f',
+        command: () => console.log('cmd + f'),
+        preventDefault: true
+      }
+    ]);
 
 
-     this.keyboard.add({
-           key: ['cmd + shift + g', 'cmd + g'],
-           command: ({event, key}) => console.log(key, event)
-     })
-}
+    this.keyboard.add({
+      key: ['cmd + shift + g', 'cmd + g'],
+      command: ({ event, key }) => console.log(key, event)
+    })
+  }
 }

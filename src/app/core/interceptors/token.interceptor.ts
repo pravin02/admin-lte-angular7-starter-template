@@ -1,5 +1,4 @@
 import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent } from '@angular/common/http';
-import { AuthService } from '../services/auth.service';
 import { Observable } from 'rxjs';
 import { SessionService } from '../services/session.service';
 

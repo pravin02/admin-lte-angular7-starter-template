@@ -1,0 +1,9 @@
+{
+    "status": true,
+    "message": "User logged in successfully.",
+    "data": {
+        "userId": 1,
+        "fullName": "Pravin P Patil",
+        "email": "prvnpatil11@gmail.com"
+    }
+}

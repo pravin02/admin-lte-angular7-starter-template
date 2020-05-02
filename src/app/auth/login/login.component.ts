@@ -14,7 +14,10 @@ import { Constants } from 'src/app/core/constants';
 import { HttpErrorResponse } from '@angular/common/http';
 import { JWTUtils } from 'src/app/core/services/jwt.utils';
 
-declare var jQuery: any;
+/**
+ * variable to hold reference of jquery instance
+ */
+declare const jQuery: any;
 
 @Component({
   selector: 'app-login',
@@ -66,8 +69,11 @@ export class LoginComponent implements OnInit, OnDestroy {
       return;
     }
 
+    //this.router.navigate(["/layout/dashboard"]);
+
     this.subscription = this.authService.login(user
     ).subscribe((response: any) => {
+      //this.router.navigate(["/layout/dashboard"]);
       if (response.status) {
         jQuery('#loginModal').modal('hide');
 

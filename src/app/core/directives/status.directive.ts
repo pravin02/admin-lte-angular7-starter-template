@@ -27,7 +27,7 @@ export class StatusDirective {
         this.highlight(this.status);
     }
 
-    public highlight(status) {
+    public highlight(status : string) {
         this.el.nativeElement.innerHTML = this.titlecase.transform(this.text);
         
         this.renderer.setStyle(this.el.nativeElement, 'background-color', this.getColorCode(status));

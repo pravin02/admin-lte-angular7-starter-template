@@ -30,7 +30,7 @@ export class UpdatePasswordComponent implements OnInit, OnDestroy {
     this.updatePasswordFormGroup = new FormGroup({
       fullName: new FormControl({ value: this.sessionService.getFullName(), disabled: true }),
       password: new FormControl('', [Validators.required]),
-      newPassword: new FormControl('', [Validators.required]),
+      newPassword: new FormControl('', [Validators.required, CustomValidators.validatePasswordPolicy]),
       confirmPassword: new FormControl('', [Validators.required])
     }, { validators: CustomValidators.confirmPassword });
 

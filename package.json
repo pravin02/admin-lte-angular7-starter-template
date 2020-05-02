@@ -5,6 +5,9 @@
   "author": "Pravin P Patil",
   "description": "admin-lte",
   "scripts": {
+    "nodemon": "node nodemon dist/admin-lte",
+    "sm": "source-map-explorer dist/admin-lte/main.*.bundle.js",
+    "ng-live": "npx lite-server --baseDir='dist/admin-lte/'",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -22,12 +25,15 @@
     "@angular/forms": "~7.2.0",
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
+    "@angular/pwa": "^0.12.0",
     "@angular/router": "~7.2.0",
+    "@angular/service-worker": "~7.2.0",
     "@ng-bootstrap/ng-bootstrap": "^4.0.1",
     "ag-grid": "^18.1.2",
     "ag-grid-angular": "^19.1.2",
     "ag-grid-community": "^19.1.4",
     "core-js": "^2.5.4",
+    "cors": "^2.8.5",
     "i": "^0.3.6",
     "jquery": "^3.3.1",
     "jquery-ui-dist": "^1.12.1",
@@ -36,6 +42,7 @@
     "ng-keyboard-shortcuts": "^6.1.1",
     "ngx-toastr": "^9.1.1",
     "ngx-webcam": "^0.2.0",
+    "nodemon": "^1.19.3",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
@@ -44,7 +51,7 @@
     "@angular-devkit/build-angular": "~0.11.0",
     "@angular/cli": "^7.2.1",
     "@angular/compiler-cli": "~7.2.0",
-    "@angular/language-service": "~7.2.0",
+    "@angular/language-service": "^7.2.15",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/jquery": "^3.3.29",
@@ -57,7 +64,9 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "lite-server": "^2.5.3",
     "protractor": "~5.4.0",
+    "source-map-explorer": "^2.0.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.2.2"
@@ -75,6 +84,8 @@
     "Mutlimodule",
     "JWT with angular"
   ],
-  
-  "contributors": ["Pravin P Patil", "Mohsin Khatik"]  
+  "contributors": [
+    "Pravin P Patil",
+    "Mohsin Khatik"
+  ]
 }
